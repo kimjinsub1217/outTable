@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ourTable</string>
+    <string name="home">홈</string>
+    <string name="recipe">레시피</string>
+    <string name="store">스토어</string>
+    <string name="style">스타일</string>
+    <string name="my_page">마이페이지</string>
+</resources>

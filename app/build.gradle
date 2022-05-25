@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+// local.properties에서 키,값 가져오기
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+def kakaoApi = localProperties.getProperty('kakaoApi')
+def kakaoApiManifest = localProperties.getProperty('kakaoApiManifest')
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.ourtable"
+        minSdk 28
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // 프로젝트에서 사용할려면 이 코드를 추가해 주세요. 키 값 형태로 저장
+        buildConfigField "String", "kakaoApi", localProperties['kakaoApi']
+
+        // 매니페스트에서 사용할려면 이 코드를 사용해주세요.
+        manifestPlaceholders = [
+                kakaoApiManifest: kakaoApiManifest
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    // 카카오 로그인
+    implementation "com.kakao.sdk:v2-user:2.9.1"
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // 이미지로딩 라이브러리
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+
+}
