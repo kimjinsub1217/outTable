@@ -8,6 +8,7 @@ def localProperties = new Properties()
 localProperties.load(new FileInputStream(rootProject.file("local.properties")))
 def kakaoApi = localProperties.getProperty('kakaoApi')
 def kakaoApiManifest = localProperties.getProperty('kakaoApiManifest')
+def ourTable = localProperties.getProperty('ourTable')
 
 android {
     compileSdk 32
@@ -23,6 +24,9 @@ android {
 
         // 프로젝트에서 사용할려면 이 코드를 추가해 주세요. 키 값 형태로 저장
         buildConfigField "String", "kakaoApi", localProperties['kakaoApi']
+
+        // 프로젝트에서 사용할려면 이 코드를 추가해 주세요. 키 값 형태로 저장
+        buildConfigField "String", "ourTable", localProperties['ourTable']
 
         // 매니페스트에서 사용할려면 이 코드를 사용해주세요.
         manifestPlaceholders = [
