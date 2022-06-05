@@ -5,4 +5,9 @@
     <string name="store">스토어</string>
     <string name="style">스타일</string>
     <string name="my_page">마이페이지</string>
+    <string name="notifications">notifications</string>
+    <string name="cart">cart</string>
+    <string name="setting">setting</string>
+    <string name="search">search</string>
+    <string name="todo">TODO</string>
 </resources>

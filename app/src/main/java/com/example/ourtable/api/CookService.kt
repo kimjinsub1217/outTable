@@ -9,7 +9,10 @@ import retrofit2.http.GET
 interface CookService {
 
 
-    @GET("/api/${BuildConfig.ourTable}/COOKRCP01/json/1/5")
-    fun getMoviesByName(): Call<Cook>
+    @GET("/api/${BuildConfig.ourTable}/COOKRCP01/json/1/20")
+    fun getCookByName(): Call<Cook>
+
+    @GET("/api/${BuildConfig.ourTable}/COOKRCP01/json/1/3")
+    fun getCookBanner(): Call<Cook>
 
 }

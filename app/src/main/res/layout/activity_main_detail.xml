@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.DetailActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/coverImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/titleTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coverImageView"
+                tools:text="계란말이" />
+
+            <TextView
+                android:id="@+id/foodRecipeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="조리방법 : "
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextName"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/foodRecipeTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/foodRecipeTextView"
+                app:layout_constraintTop_toBottomOf="@id/titleTextName"
+                tools:text="끊이기" />
+
+            <TextView
+                android:id="@+id/foodTypeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="요리종류 : "
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodRecipeTextName"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/foodTypeTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/foodTypeTextView"
+                app:layout_constraintTop_toBottomOf="@id/foodRecipeTextName"
+                tools:text="후식" />
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodTypeTextView"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95" />
+
+            <TextView
+                android:id="@+id/ingredientText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="기본재료"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineView"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/ingredientTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredientText" />
+
+            <View
+                android:id="@+id/lineView2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredientTextView"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95" />
+
+            <TextView
+                android:id="@+id/recipe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="만드는 법"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineView2"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/recipeImageView1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipe"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView1"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView1"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView2"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView2"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView3"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView4"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView3"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView4"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView5"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView4"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView5"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView6"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView5"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView6"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView7"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView6"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView7"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView8"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView7"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView8"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView9"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView8"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView9"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView10"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView9"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView10"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView11"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView10"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView11"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView12"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView11"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView12"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView13"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView12"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView13"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView14"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView13"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView14"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView15"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView14"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView15"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView16"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView15"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView16"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView17"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView16"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView17"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView18"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView17"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView18"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView19"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView18"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView19"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <ImageView
+                android:id="@+id/recipeImageView20"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView19"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/recipeTextView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeImageView20"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95"
+                tools:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다." />
+
+            <View
+                android:id="@+id/lineView3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTextView20"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.95" />
+
+            <TextView
+                android:id="@+id/TipTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="팁을 알려주세요!"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineView3"/>
+
+            <EditText
+                android:id="@+id/reviewEditText"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toTopOf="@id/saveButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TipTextView" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_color"
+                android:text="팁 알려주기"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

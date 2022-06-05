@@ -1,8 +1,11 @@
 package com.example.ourtable.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Row(
     @SerializedName("ATT_FILE_NO_MAIN")
     val aTTFILENOMAIN: String?,
@@ -112,4 +115,4 @@ data class Row(
     val rCPSEQ: String?,
     @SerializedName("RCP_WAY2")
     val rCPWAY2: String?
-)
+) : Parcelable
